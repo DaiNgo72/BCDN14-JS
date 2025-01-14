@@ -100,3 +100,16 @@ pComputed.getPropertyValue('font-size');
 
 # Return Function
 - Khi function có return rồi hay là đã biết giá trị của function là gì rồi. Thì nó sẽ không xử lý những đoạn logic bên dưới nữa.
+
+# Đệ quy
+- function gọi function
+- phải có điều dừng
+- function chỉ dừng khi nó tìm thấy giá trị của nó hay còn gọi là có return
+
+# Vòng lặp
+- Lặp đi lặp lại 1 việc gì đó
+- Đến khi dk lặp bị sai thì dừng
+
+## while
+## do while
+## for
