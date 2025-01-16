@@ -334,3 +334,226 @@ function sum_3(n) {
 }
 
 sum_3(100);
+
+/**
+ * 1: *
+ * 2: **
+ * 3: ***
+ */
+
+function inNgoiSao(n) {
+
+    let ngoiSao = "";
+
+    for (let i = 1; i <= n; i++) {
+        ngoiSao += "*";
+    }
+
+    return ngoiSao;
+}
+
+console.log(inNgoiSao(1)); // *
+console.log(inNgoiSao(2)); // **
+console.log(inNgoiSao(3)); // ***
+
+
+/**
+ * 6:
+ * *
+ * **
+ * ***
+ * ****
+ * *****
+ * ******
+ */
+
+function inCayThong(n) {
+    let rs = "";
+
+    for (let i = 1; i <= n; i++) {
+        let ngoiSao = "";
+
+        for (let j = 1; j <= i; j++) {
+            ngoiSao += "*";
+        }
+
+        rs += ngoiSao + "\n";
+    }
+
+    return rs;
+}
+
+let rs = inCayThong(7);
+console.log(rs);
+
+
+/**
+ * i = 0;
+ * k = 0;
+ * 00, 01, 02, 03
+ * 
+ * i = 1;
+ * k = 1;
+ * 11, 12, 13
+ * 
+ * i = 2;
+ * k = 2;
+ * 22, 23
+ * 
+ * i = 3
+ * k = 3;
+ * 33
+ *
+ * 
+ * 
+ */
+for (let i = 0; i < 4; i++) {
+
+    for (let k = i; k < 4; k++) {
+        console.log(`${i} ${k}`);
+    }
+
+}
+
+
+/**
+ * n = 4
+ * m = 6
+ * n x m = hang * cot
+ * 
+ * 000000
+ * 000000
+ * 000000
+ * 000000
+ * 
+ */
+
+function inMaTran(n, m) {
+
+    let matran = "";
+    // Chạy theo hàng
+    // Sau mỗi lần chạy thì có được cột
+    for (let i = 1; i <= n; i++) {
+
+        let cot = "";
+        // chạy theo cột
+        for (let j = 1; j <= m; j++) {
+            cot += "0";
+        }
+
+        matran += cot + "\n";
+    }
+
+    return matran;
+}
+
+
+console.log(inMaTran(3, 8));
+
+
+function inBanCoVua(n, m) {
+    let banCoVua = "";
+
+    for (let i = 0; i < n; i++) {
+
+        for (let j = 0; j < m; j++) {
+            // (i + j) % 2: nếu là chẵn sẽ + 0
+            // lẻ sẽ +1
+
+            // chẵn kq sẽ là 0 => falsy
+            // lẻ kq sẽ là 1 => truthy
+
+            let x = (i + j) % 2 ? 1 : 0;
+
+            // if ((i + j) % 2) {
+            //     x += 1;
+            // } else {
+            //     x += 0;
+            // }
+
+            banCoVua += x + " ";
+
+            // banCoVua = (i + j) % 2 + " ";
+        }
+
+
+        banCoVua += "\n";
+    }
+
+    return banCoVua;
+
+}
+
+/**
+ * 0: màu trắng
+ * 1: màu đen
+ */
+// console.log(inBanCoVua(8, 8));
+
+/**
+ * innerHTML
+ */
+
+inBanCoVua(3, 3);
+
+let boxBlack = '<div class="box box--black"></div>'
+let boxWhite = '<div class="box box--white"></div>'
+
+let coVua = document.querySelector('#co-vua');
+coVua.innerHTML = "";
+
+function inBanCoVuaHTML(n, m) {
+    let banCoVua = "";
+
+    for (let i = 0; i < n; i++) {
+
+        let hang = '<div class="row">';
+
+        for (let j = 0; j < m; j++) {
+            hang += (i + j) % 2 ? boxBlack : boxWhite;
+            hang += "\n";
+        }
+
+        hang += '</div>';
+
+        banCoVua += hang + "\n";
+    }
+
+    coVua.innerHTML = banCoVua;
+}
+
+inBanCoVuaHTML(8, 8);
+
+
+function abc() {
+    console.log('start')
+
+    for (let j = 0; j < 1000; j++) {
+        for (let i = 0; i < 100; i++) {
+
+            if (i === 10) {
+                break;
+            }
+
+            if (i === 5) {
+                continue;
+            }
+
+            console.log(i);
+
+            return i;
+        }
+    }
+
+    console.log("end")
+}
+
+
+console.log(abc()); // ???
+
+
+
+
+
+
+
