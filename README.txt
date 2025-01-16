@@ -113,3 +113,16 @@ pComputed.getPropertyValue('font-size');
 ## while
 ## do while
 ## for
+
+
+# Cộng string rớt xuống dòng
+- "\n" giống như thể br để rớt dòng
+
+
+# continue
+- skip qua những dòng phía dưới và chạy vòng lặp tiếp theo
+
+# break
+- lặp: thoát khỏi vòng lặp
+
+# return
