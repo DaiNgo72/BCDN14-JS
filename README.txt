@@ -153,3 +153,13 @@ pComputed.getPropertyValue('font-size');
     + delete
 - Cập nhật giá trị tại vị trí index
     + mang[index] = giá trị mới
+
+- Xoá 
+    + cuối: pop
+    + đầu: shift
+    + xoá bất kỳ: splice( vị trí index muốn xoá, xoá bao nhiêu phần tử từ vị trí đó  )
+
+- Thêm
+    + cuối: push
+    + đầu: unshift
+    + bất kỳ: 

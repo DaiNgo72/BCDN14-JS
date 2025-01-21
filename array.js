@@ -127,10 +127,10 @@ let danhSachTodo = [
  */
 // 3. .innerHTML = stringHTML
 
-function generateLiDanhSachTodo(){
+function generateLiDanhSachTodo() {
     let content = "";
 
-    for(let i=0; i< danhSachTodo.length; i++){
+    for (let i = 0; i < danhSachTodo.length; i++) {
         console.log(danhSachTodo[i]);
         // let li = "<li>" + danhSachTodo[i] + "</li>"
 
@@ -171,13 +171,13 @@ danhSachTodo.unshift("Dọn dẹp bàn học");
 // ....
 renderDanhSachTodo();
 
-function handleAddTodo(){
+function handleAddTodo() {
     console.log("click");
 
     let todoInp = document.getElementById('input');
     let todo = todoInp.value;
 
-    if(todo.trim().length === 0) {
+    if (todo.trim().length === 0) {
         alert("Không được để trống ô input");
         return;
     }
@@ -207,8 +207,118 @@ document.getElementById('input').onkeydown = function (event) {
     console.log("event:::", event);
 
     // Nếu người dùng nhấn enter thì add todo vào
-    if(event.key === "Enter") {
+    if (event.key === "Enter") {
         handleAddTodo();
     }
 
 }
+
+
+// Làm sao để xoá đi phần tử cuối mảng
+let numbers = [1, 2, 3, 4, 5, 6, 7];
+// delete numbers[numbers.length - 1]
+// console.log(numbers.length); // ??? 3
+
+// Xoá cuối
+numbers.pop();
+console.log('danh sach numbers sau khi xoa cuoi', numbers);
+
+// Xoá đầu
+numbers.shift(); // shift dịch chuyển đi, xoá
+console.log('danh sach numbers sau khi xoa dau', numbers);
+
+// --------------------------
+numbers = [1, 2, 3, 4, 5, 6, 7];
+console.log('numbers :::', numbers);
+// splice
+// tham số 1: vị trí index bắt đầu mình muốn xoá,
+// tham số 2: số phần tử mình muốn xoá từ vị trí bắt đầu
+numbers.splice(2, 3);
+console.log("numbers sau khi dung splice(2,3)", numbers);
+
+// -------------------------
+numbers = [1, 2, 3, 4, 5, 6, 7];
+console.log('numbers :::', numbers);
+
+// mong muốn xoá số 5 và 6
+numbers.splice(4, 2)
+console.log("numbers sau khi dung splice(4,2)", numbers);
+
+// ------------------------
+numbers = [1, 2, 3, 4, 5, 6, 4, 7];
+console.log('numbers :::', numbers);
+
+// xoá phần tử có giá trị là 4
+
+// 1. tìm vị trí của giá trị 4
+// mình không biết giá trị 4 ở vị trí nào hết, phải for duyệt từ đầu đến cuối
+
+let indexOf4 = -1;
+
+// lấy index của phần tử tìm thấy đầu tiên.
+for (let i = 0; i < numbers.length; i++) {
+
+    console.log(numbers[i]);
+
+    if (numbers[i] === 4) {
+        indexOf4 = i;
+
+        // Sau khi tìm thấy xong thì dừng luôn vòng lặp
+        break;
+    }
+
+}
+
+
+// 2. .splice để xoá
+// Nếu như khác -1 có nghĩa là đã tìm thấy giá trị index
+if (indexOf4 !== -1) {
+    numbers.splice(indexOf4, 1);
+}
+
+console.log("numbers sau khi xoa gia tri 4 :::", numbers);
+
+// --------------------
+numbers = [1,2,3,4,5,6,7];
+console.log('numbers truoc', numbers);
+
+// [1,2,3,9,4,5,6,7]
+// Tại vị trí index = 3, không xoá, mà chỉ thêm vào giá trị 9
+numbers.splice(3, 0, 9);
+
+console.log("numbers sau", numbers);
+
+
+// --------------------
+numbers = [1,2,3,4,5,6,7];
+console.log('numbers truoc', numbers);
+
+// [1,2,3,4,5,6,9,7]
+numbers.splice(6,0,9);
+console.log("numbers sau", numbers);
+
+
+
+// --------------------
+numbers = [1,2,3,4,5,6,7];
+console.log('numbers truoc', numbers);
+
+// [1,2,9,3,4,5,6,7]
+// Thêm số 9 vào vị trí phần tử có giá trị 3
+let idx = -1;
+
+for(let i=0; i<numbers.length; i++){
+    let item = numbers[i];
+
+    if(item === 3){
+        idx = i;
+        break;
+    }
+
+}
+
+if(idx !== -1) {
+    numbers.splice(idx, 0, 9);
+}
+
+
