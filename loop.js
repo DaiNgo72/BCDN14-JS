@@ -556,4 +556,17 @@ console.log(abc()); // ???
 
 
 
+// function abc(){
 
+// }
+
+// document.getElementById('btn').onclick = abc;
+
+
+let abc = function(){
+
+}
+
+document.getElementById('btn').onclick = function(){
+
+}

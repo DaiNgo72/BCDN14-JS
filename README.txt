@@ -126,3 +126,30 @@ pComputed.getPropertyValue('font-size');
 - lặp: thoát khỏi vòng lặp
 
 # return
+
+# Khai báo biến?
+| 2 Cách
+- let
+- const
+
+# Biến dùng để làm gì?
+- lưu giữ giá trị
+
+# Những kiểu dữ liệu nào mình có thể lưu được trong biến
+- number, string, boolean, null, undefined, function 
+
+# Biến đang lưu trữ
+- lưu trữ được 1 giá trị duy nhất
+
+# Array
+- lấy số lượng phần tử
+    + .length
+- lấy tại vị trí index nào đó
+    + [ index ]
+- lấy tại vị trí cuối cùng trong mảng
+    + [.length - 1]
+    + .at(-1)
+- Xoá 1 phần tử
+    + delete
+- Cập nhật giá trị tại vị trí index
+    + mang[index] = giá trị mới
