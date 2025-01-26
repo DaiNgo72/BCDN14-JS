@@ -142,6 +142,9 @@ pComputed.getPropertyValue('font-size');
 - lưu trữ được 1 giá trị duy nhất
 
 # Array
+- Lưu được nhiều giá trị trong một biến.
+- Có thể chứa nhiều kiểu dữ liệu khác nhau.
+
 - lấy số lượng phần tử
     + .length
 - lấy tại vị trí index nào đó
@@ -163,3 +166,8 @@ pComputed.getPropertyValue('font-size');
     + cuối: push
     + đầu: unshift
     + bất kỳ: 
+
+- splice(
+    vi_tri_index_muon_can_thiep, so_luong_phan_tu_can_xoa, 
+    (optional) gia_tri_can_them_vao_mang_tai_vi_tri_index_do 
+)
