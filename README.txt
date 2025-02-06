@@ -141,7 +141,10 @@ pComputed.getPropertyValue('font-size');
 # Biến đang lưu trữ
 - lưu trữ được 1 giá trị duy nhất
 
-# Array
+# Primitive Type
+- number, string, boolean, null, undefined
+
+# Array (Object Type)
 - Lưu được nhiều giá trị trong một biến.
 - Có thể chứa nhiều kiểu dữ liệu khác nhau.
 
@@ -171,3 +174,10 @@ pComputed.getPropertyValue('font-size');
     vi_tri_index_muon_can_thiep, so_luong_phan_tu_can_xoa, 
     (optional) gia_tri_can_them_vao_mang_tai_vi_tri_index_do 
 )
+
+# Methods Array
+- map: duyệt qua từng phần tử của mảng và trả về cho chúng ta một mảng mới, và mỗi phần tử mảng mới là do giá trị function chúng ta truyền vào quyết định.
+
+- filter: duyệt qua từng phần tử của mảng và trả về cho chúng ta một mảng mới, các phần tử của mảng mới phải thỏa điều kiện của function chúng ta truyền vào.
+
+- forEach: duyệt qua từng phần tử của mảng. Không có giá trị trả về.
